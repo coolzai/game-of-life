@@ -1,7 +1,7 @@
 function gol
-clear all;
-close all;
-clc;
+clear
+close all
+clc
 
 % Grid size
 nelx = 100;
@@ -11,7 +11,7 @@ nely = 100;
 % Initial cell
 cells = zeros(nelx, nely);
 % Generate random life cells
-idx = randi(numel(cells), numel(cells)/10, 1);
+idx = randsample(numel(cells), numel(cells)/10);
 cells(idx) = 1;
 showCells(cells);
 
@@ -42,6 +42,7 @@ cExt(1, end) = c(end, 1);
 cExt(end, 1) = c(1, end);
 cExt(end, end) = c(1, 1);
 [nelx, nely] = size(c);
+
 cNew = zeros(size(c));
 % Initial loop
 idx = 0;
