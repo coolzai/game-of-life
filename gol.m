@@ -1,5 +1,8 @@
 function gol
-clear all, close all, clc
+clear all;
+close all;
+clc;
+
 % Grid size
 nelx = 100;
 nely = 100;
@@ -8,7 +11,7 @@ nely = 100;
 % Initial cell
 cells = zeros(nelx, nely);
 % Generate random life cells
-idx = randi(numel(cells), numel(cells)/2, 1);
+idx = randi(numel(cells), numel(cells)/10, 1);
 cells(idx) = 1;
 showCells(cells);
 
